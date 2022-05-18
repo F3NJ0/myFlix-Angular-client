@@ -16,7 +16,7 @@ const username = localStorage.getItem('user');
 @Injectable({
   providedIn: 'root'
 })
-export class UserRegistrationService {
+export class FetchApiDataService {
   // Inject HttpClient module to constructor params
   constructor(private http: HttpClient) { }
 
@@ -36,16 +36,12 @@ export class UserRegistrationService {
 
   /**
    * calls API endpoint to login an existing user
-   * @param username 
-   * @param password 
+   * @param userDetails 
    * @returns data of the user in JSON format
    */
-  public userLogin(username: any, password: any): Observable<any> {
+  public userLogin(userDetails: any): Observable<any> {
     return this.http
-      .post(apiUrl + 'login', {
-        Username: username,
-        Password: password
-      })
+      .post(apiUrl + 'login', userDetails)
       .pipe(
         catchError(this.handleError)
       );

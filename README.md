@@ -99,6 +99,17 @@ ng serve --open
 3. Implement services logic to make API calls
 
 
+### Add Angular Material to application
+1. Install project dependency
+```bash
+$ ng add @angular/material
+```
+
+2. Import models from Angular Material to app.module.ts
+
+3. Add modules to imports array to serve to other components
+
+
 
 
 
