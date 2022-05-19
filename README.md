@@ -22,6 +22,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Deploy to gh-pages
+Run `ng deploy --base-href=/myFlix-Angular-client/`
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
@@ -46,6 +49,7 @@ additional movie details will be displayed. The single movie view will contain t
 
 I chose to create the application using **Angular** due to the following considerations:
 
+I use **Angular Material** to style the UI of my application to make it responsive and take advantage of the ready to use components, such as mat cards.
 
 ### What challenges did I face, what did I learn?
 TBD
@@ -97,6 +101,18 @@ ng serve --open
   ```
 
 3. Implement services logic to make API calls
+* User registration
+* User login
+* Get all movies
+* Get one movie
+* Get director
+* Get genre
+* Get user
+* Get favourite movies for a user
+* Add a movie to favourite Movies
+* Edit user
+* Delete user and
+* Delete a movie from the favorite movies
 
 
 ### Add Angular Material to application
@@ -109,8 +125,54 @@ $ ng add @angular/material
 
 3. Add modules to imports array to serve to other components
 
+### Create components for user to use application
+Using the command:
+```bash
+$ ng generate component my-component-name
+```
+
+Structure of components:
+* Welcome screen
+  * User registration form (signup)
+  * User login form
+* Navbar 
+* Movie Card View
+* Dialogs for Movie Card: 
+  * Director
+  * Genre
+  * Synopsis
+* Profile View
+  * Edit profile dialog
 
 
+### Add routing to application
+1. Import Angular's built-in router:
+```bash
+import { RouterModule, Routes } from '@angular/router';
+```
+
+2. Add to app.component.html
+```bash
+<router-outlet></router-outlet> 
+```
+
+3. Create routes in app.module.ts
+
+### Deploy application on github pages
+
+1. If not done yet: Create github repository for application
+
+2. If also not done yet: Link the new remote repository to the local project folder. To do so, simply run this command from inside your project folder (replace <GitHub-username> and <repository-name> with your own GitHub username and repository name): git remote add origin https://github.com/<GitHub-username>/<repository-name>.git
+
+3. Add angular-cli-ghpages by running 
+```bash
+ng add angular-cli-ghpages.
+```
+
+4. Build your application (i.e., generate static HTML, CSS, and JavaScript files out of your application so that browsers can interpret them without the need to use any extra tools/plugins). To do so, run the following command, replacing <repository-name> with your own repository name:
+```bash
+ ng deploy --base-href=/<repository-name>/.
+```
 
 
 
