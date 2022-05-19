@@ -1,31 +1,32 @@
 # MyFlixAngularClient
 
+## General notes on this Angular project
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
-## Development server
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Deploy to gh-pages
+### Deploy to gh-pages
 Run `ng deploy --base-href=/myFlix-Angular-client/`
 
-## Further help
+### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
@@ -52,7 +53,7 @@ I chose to create the application using **Angular** due to the following conside
 I use **Angular Material** to style the UI of my application to make it responsive and take advantage of the ready to use components, such as mat cards.
 
 ### What challenges did I face, what did I learn?
-TBD
+* Transferring data from one component to the other (e.g., from movie-card-component to genre-component). Found the solution by 'Injecting' the variables using @Inject(MAT_DIALOG_DATA).
 
 ## Development Process for the chat application
 ### Install Angular
