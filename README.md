@@ -177,6 +177,19 @@ ng add angular-cli-ghpages.
  ng deploy --base-href=/<repository-name>/.
 ```
 
+### Add TypeDoc Documentation
+1. Install typedoc (if not yet installed):
+```bash
+npm install typedoc
+```
+
+2. Check that code is commented adhering to best practices
+
+3. Run typedoc to create documentation:
+```bash
+typedoc --entryPointStrategy expand ./src
+```
+
 
 
 
