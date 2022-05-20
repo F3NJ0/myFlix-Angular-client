@@ -55,7 +55,9 @@ I use **Angular Material** to style the UI of my application to make it responsi
 ### What challenges did I face, what did I learn?
 * Transferring data from one component to the other (e.g., from movie-card-component to genre-component). Found the solution by 'Injecting' the variables using @Inject(MAT_DIALOG_DATA).
 
-## Development Process for the chat application
+* The application requires a service to get the favorite movies of a user. As this API endpoint was not defined yet, I had to go back to the backend code and add this GET endpoint.
+
+## Development Process for the movies application
 ### Install Angular
 1. Check if Angular is already installed on device
 ```bash
